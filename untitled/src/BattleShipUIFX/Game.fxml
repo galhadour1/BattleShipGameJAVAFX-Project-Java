@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<GridPane fx:id="MainPane" prefHeight="600.0" prefWidth="900.0" stylesheets="@../Resources/style/css/GameStylesheet.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BattleShipUIFX.GameController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="NEVER" maxWidth="218.0" minWidth="10.0" prefWidth="218.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="59.5" minWidth="0.0" prefWidth="0.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="336.0" minWidth="10.0" percentWidth="37.0" prefWidth="326.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="47.0" minWidth="0.0" prefWidth="13.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="352.0" minWidth="10.0" percentWidth="37.0" prefWidth="305.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="361.0" minHeight="0.0" prefHeight="87.5" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="361.0" minHeight="10.0" prefHeight="73.5" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="160.0" minHeight="0.0" prefHeight="98.5" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="680.0" minHeight="10.0" percentHeight="55.0" prefHeight="346.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <GridPane fx:id="hitsGridPane" gridLinesVisible="true" hgap="2.0" prefHeight="339.0" prefWidth="326.0" styleClass="gridPane..\..\..\..\גאווה\BattleShipFX-lior\BattleShipFX\src\Resources\style\css\GameStylesheet.css" vgap="2.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+        <columnConstraints>
+            <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="TextToPlayerLabel" prefHeight="250.0" prefWidth="326.0" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Comic Sans MS" size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <GridPane fx:id="shipsGridPane" gridLinesVisible="true" hgap="2.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="343.0" prefWidth="342.0" styleClass="..\..\..\..\גאווה\BattleShipFX-lior\BattleShipFX\src\Resources\style\css\GameStylesheet.css" vgap="2.0" GridPane.columnIndex="4" GridPane.rowIndex="3">
+        <columnConstraints>
+          <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+        </rowConstraints>
+      </GridPane>
+      <Pane fx:id="DeatailsPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="140.0" prefWidth="790.0" styleClass="detailsPane" GridPane.columnSpan="5" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="NEVER">
+         <children>
+            <Label fx:id="label_currentPlayer" layoutX="402.0" layoutY="-2.0" prefHeight="32.0" prefWidth="138.0" styleClass="playerLabel, shadowEffect" stylesheets="@../Resources/style/css/GameStylesheet.css" text="currentPlayer">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="label_score" layoutX="745.0" layoutY="33.0" prefHeight="32.0" prefWidth="45.0" styleClass="detailsPreLabel, shadowEffect" stylesheets="@../Resources/style/css/GameStylesheet.css" text="Score:" />
+            <Label fx:id="label_TheScore" layoutX="790.0" layoutY="33.0" prefHeight="32.0" prefWidth="65.0" styleClass="deatilsLabel, shadowEffect" stylesheets="@../Resources/style/css/GameStylesheet.css" text="TheScore" />
+            <Label fx:id="label_hits" layoutX="23.0" layoutY="40.0" styleClass="detailsPreLabel, shadowEffect" stylesheets="@../Resources/style/css/GameStylesheet.css" text="Hits:" />
+            <Label fx:id="label_misses" layoutX="166.0" layoutY="40.0" styleClass="detailsPreLabel, shadowEffect" stylesheets="@../Resources/style/css/GameStylesheet.css" text="Misses:" />
+            <Label fx:id="label_TheMisses" layoutX="208.0" layoutY="33.0" prefHeight="32.0" prefWidth="71.0" styleClass="deatilsLabel, shadowEffect" stylesheets="@../Resources/style/css/GameStylesheet.css" text="TheMisses" />
+            <Label fx:id="label_TheHits" layoutX="59.0" layoutY="33.0" prefHeight="32.0" prefWidth="71.0" styleClass="deatilsLabel, shadowEffect" stylesheets="@../Resources/style/css/GameStylesheet.css" text="TheHits" />
+            <Label fx:id="label_TheTime" layoutX="408.0" layoutY="33.0" prefHeight="32.0" prefWidth="65.0" styleClass="deatilsLabel, shadowEffect" stylesheets="@../Resources/style/css/GameStylesheet.css" text="TheTime" />
+            <Label fx:id="label_Time" layoutX="343.0" layoutY="33.0" prefHeight="32.0" prefWidth="71.0" styleClass="detailsPreLabel, shadowEffect" stylesheets="@../Resources/style/css/GameStylesheet.css" text="Avg Time:" />
+            <Label fx:id="label_MinesLeft" layoutX="524.0" layoutY="33.0" prefHeight="32.0" prefWidth="90.0" styleClass="detailsPreLabel, shadowEffect" stylesheets="@../Resources/style/css/GameStylesheet.css" text="Mines Left:" />
+            <Label fx:id="label_TheMines" layoutX="597.0" layoutY="33.0" maxWidth="1.7976931348623157E308" prefHeight="32.0" prefWidth="71.0" styleClass="deatilsLabel, shadowEffect" stylesheets="@../Resources/style/css/GameStylesheet.css" text="TheMisses" />
+         </children>
+      </Pane>
+      <Pane prefHeight="319.0" prefWidth="196.0" styleClass="gridPane" GridPane.rowIndex="3">
+         <children>
+            <Pane fx:id="MenuPane" layoutY="8.0" prefHeight="299.0" prefWidth="213.0" styleClass="MenuPane" stylesheets="@../Resources/style/css/GameStylesheet.css">
+               <children>
+                  <Button layoutX="13.0" layoutY="145.0" mnemonicParsing="false" onAction="#BackToMainMenu" prefHeight="28.0" prefWidth="177.0" stylesheets="@../Resources/style/css/GameStylesheet.css" text="Back To The Main Menu">
+                     <styleClass>
+                        <String fx:value="menuButton" />
+                        <String fx:value="shadowEffect" />
+                        <String fx:value="exitButton" />
+                     </styleClass>
+                  </Button>
+                  <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#OnClick_ShowStatistics" prefHeight="28.0" prefWidth="177.0" stylesheets="@../Resources/style/css/GameStylesheet.css" text="Show Satistics">
+                     <styleClass>
+                        <String fx:value="menuButton" />
+                        <String fx:value="shadowEffect" />
+                     </styleClass>
+                  </Button>
+                  <Button layoutX="14.0" layoutY="80.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="177.0" stylesheets="@../Resources/style/css/GameStylesheet.css" text="Save">
+                     <styleClass>
+                        <String fx:value="menuButton" />
+                        <String fx:value="shadowEffect" />
+                     </styleClass>
+                  </Button>
+                  <Button layoutX="14.0" layoutY="220.0" mnemonicParsing="false" onAction="#Exit" prefHeight="28.0" prefWidth="177.0" stylesheets="@../Resources/style/css/GameStylesheet.css" text="Exit">
+                     <styleClass>
+                        <String fx:value="menuButton" />
+                        <String fx:value="shadowEffect" />
+                        <String fx:value="exitButton" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane fx:id="StatisticPane" prefHeight="319.0" prefWidth="213.0" styleClass="menuPane" stylesheets="@../Resources/style/css/GameStylesheet.css" visible="false">
+               <children>
+                  <Label layoutX="6.0" layoutY="14.0" prefHeight="22.0" prefWidth="90.0" stylesheets="@../Resources/style/css/GameStylesheet.css" text="Statistics:">
+                     <styleClass>
+                        <String fx:value="detailsPreLabel" />
+                        <String fx:value="shadowEffect" />
+                     </styleClass>
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="27.0" layoutY="38.0" prefHeight="22.0" prefWidth="46.0" stylesheets="@../Resources/style/css/GameStylesheet.css" text="Moves:">
+                     <styleClass>
+                        <String fx:value="detailsPreLabel" />
+                        <String fx:value="shadowEffect" />
+                     </styleClass>
+                  </Label>
+                  <Label layoutX="27.0" layoutY="60.0" prefHeight="22.0" prefWidth="90.0" stylesheets="@../Resources/style/css/GameStylesheet.css" text="Time Passed:">
+                     <styleClass>
+                        <String fx:value="detailsPreLabel" />
+                        <String fx:value="shadowEffect" />
+                     </styleClass>
+                  </Label>
+                  <Label layoutX="6.0" layoutY="98.0" prefHeight="22.0" prefWidth="138.0" stylesheets="@../Resources/style/css/GameStylesheet.css" text="Player A statistics:">
+                     <styleClass>
+                        <String fx:value="detailsPreLabel" />
+                        <String fx:value="shadowEffect" />
+                     </styleClass>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="27.0" layoutY="126.0" prefHeight="22.0" prefWidth="46.0" stylesheets="@../Resources/style/css/GameStylesheet.css" text="Score:">
+                     <styleClass>
+                        <String fx:value="detailsPreLabel" />
+                        <String fx:value="shadowEffect" />
+                     </styleClass>
+                  </Label>
+                  <Label layoutX="27.0" layoutY="171.0" prefHeight="22.0" prefWidth="65.0" stylesheets="@../Resources/style/css/GameStylesheet.css" text="Avg Time:">
+                     <styleClass>
+                        <String fx:value="detailsPreLabel" />
+                        <String fx:value="shadowEffect" />
+                     </styleClass>
+                  </Label>
+                  <Label layoutX="27.0" layoutY="149.0" prefHeight="22.0" prefWidth="38.0" stylesheets="@../Resources/style/css/GameStylesheet.css" text="Miss:">
+                     <styleClass>
+                        <String fx:value="detailsPreLabel" />
+                        <String fx:value="shadowEffect" />
+                     </styleClass>
+                  </Label>
+                  <Label layoutX="27.0" layoutY="259.0" prefHeight="22.0" prefWidth="38.0" stylesheets="@../Resources/style/css/GameStylesheet.css" text="Miss:">
+                     <styleClass>
+                        <String fx:value="detailsPreLabel" />
+                        <String fx:value="shadowEffect" />
+                     </styleClass>
+                  </Label>
+                  <Label layoutX="27.0" layoutY="281.0" prefHeight="22.0" prefWidth="65.0" stylesheets="@../Resources/style/css/GameStylesheet.css" text="Avg Time:">
+                     <styleClass>
+                        <String fx:value="detailsPreLabel" />
+                        <String fx:value="shadowEffect" />
+                     </styleClass>
+                  </Label>
+                  <Label layoutX="27.0" layoutY="236.0" prefHeight="22.0" prefWidth="45.0" stylesheets="@../Resources/style/css/GameStylesheet.css" text="Score:">
+                     <styleClass>
+                        <String fx:value="detailsPreLabel" />
+                        <String fx:value="shadowEffect" />
+                     </styleClass>
+                  </Label>
+                  <Label layoutX="6.0" layoutY="208.0" prefHeight="22.0" prefWidth="138.0" stylesheets="@../Resources/style/css/GameStylesheet.css" text="Player B statistics:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="detailsPreLabel" />
+                        <String fx:value="shadowEffect" />
+                     </styleClass>
+                  </Label>
+                  <Label fx:id="label_StatMoves" layoutX="121.0" layoutY="38.0" prefHeight="22.0" prefWidth="71.0" stylesheets="@../Resources/style/css/GameStylesheet.css" text="0">
+                     <styleClass>
+                        <String fx:value="detailsPreLabel" />
+                        <String fx:value="shadowEffect" />
+                     </styleClass>
+                  </Label>
+                  <Label fx:id="label_StatTimePassed" layoutX="121.0" layoutY="60.0" prefHeight="22.0" prefWidth="71.0" stylesheets="@../Resources/style/css/GameStylesheet.css" text="0">
+                     <styleClass>
+                        <String fx:value="detailsPreLabel" />
+                        <String fx:value="shadowEffect" />
+                     </styleClass>
+                  </Label>
+                  <Label fx:id="label_StatAScore" layoutX="121.0" layoutY="126.0" prefHeight="22.0" prefWidth="71.0" stylesheets="@../Resources/style/css/GameStylesheet.css" text="0">
+                     <styleClass>
+                        <String fx:value="detailsPreLabel" />
+                        <String fx:value="shadowEffect" />
+                     </styleClass>
+                  </Label>
+                  <Label fx:id="label_StatBScore" layoutX="121.0" layoutY="236.0" prefHeight="22.0" prefWidth="71.0" stylesheets="@../Resources/style/css/GameStylesheet.css" text="0">
+                     <styleClass>
+                        <String fx:value="detailsPreLabel" />
+                        <String fx:value="shadowEffect" />
+                     </styleClass>
+                  </Label>
+                  <Label fx:id="label_StatBMiss" layoutX="121.0" layoutY="259.0" prefHeight="22.0" prefWidth="71.0" stylesheets="@../Resources/style/css/GameStylesheet.css" text="0">
+                     <styleClass>
+                        <String fx:value="detailsPreLabel" />
+                        <String fx:value="shadowEffect" />
+                     </styleClass>
+                  </Label>
+                  <Label fx:id="label_StatAMiss" layoutX="121.0" layoutY="149.0" prefHeight="22.0" prefWidth="71.0" stylesheets="@../Resources/style/css/GameStylesheet.css" text="0">
+                     <styleClass>
+                        <String fx:value="detailsPreLabel" />
+                        <String fx:value="shadowEffect" />
+                     </styleClass>
+                  </Label>
+                  <Label fx:id="label_StatAAvgTime" layoutX="121.0" layoutY="171.0" prefHeight="22.0" prefWidth="71.0" stylesheets="@../Resources/style/css/GameStylesheet.css" text="0">
+                     <styleClass>
+                        <String fx:value="detailsPreLabel" />
+                        <String fx:value="shadowEffect" />
+                     </styleClass>
+                  </Label>
+                  <Label fx:id="label_StatBAvgTime" layoutX="121.0" layoutY="281.0" prefHeight="22.0" prefWidth="71.0" stylesheets="@../Resources/style/css/GameStylesheet.css" text="0">
+                     <styleClass>
+                        <String fx:value="detailsPreLabel" />
+                        <String fx:value="shadowEffect" />
+                     </styleClass>
+                  </Label>
+                  <Button ellipsisString="" layoutX="175.0" layoutY="281.0" mnemonicParsing="false" onAction="#OnClick_backToMenu" opacity="0.5" prefHeight="27.0" prefWidth="28.0" styleClass="backButton" stylesheets="@../Resources/style/css/GameStylesheet.css" />
+               </children>
+            </Pane>
+         </children></Pane>
+      <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <children>
+            <Pane fx:id="Missile" layoutX="105.0" layoutY="39.0" maxHeight="30.0" maxWidth="77.0" minHeight="30.0" minWidth="50.0" onDragDetected="#Attack" prefHeight="30.0" prefWidth="77.0" stylesheets="@../Resources/style/css/GameStylesheet.css">
+               <children>
+                  <Pane fx:id="Missile1" layoutX="-1.0" layoutY="6.0" maxHeight="30.0" maxWidth="77.0" minHeight="30.0" minWidth="50.0" onDragDetected="#Attack" prefHeight="30.0" prefWidth="77.0" stylesheets="@../../../../../גאווה/BattleShipFX-lior/BattleShipFX/src/Resources/style/css/GameStylesheet.css" />
+               </children>
+            </Pane>
+            <Label layoutY="41.0" prefHeight="17.0" prefWidth="71.0" text="Attack:" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="-55.0" layoutY="67.0" prefHeight="17.0" prefWidth="158.0" text="(Drag And Drop The Missile)" textAlignment="CENTER">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="11.0" />
+               </font>
+               <textFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#fdfdfd" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
+         </children>
+      </Pane>
+      <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+         <children>
+            <Label fx:id="label_AddMine1" layoutX="70.0" layoutY="34.0" prefHeight="32.0" prefWidth="90.0" text="Add Mine:" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS Bold Italic" size="17.0" />
+               </font>
+            </Label>
+            <Pane fx:id="Mine" layoutX="174.0" layoutY="30.0" maxHeight="40.0" maxWidth="42.0" minHeight="30.0" minWidth="30.0" onDragDetected="#putAMine" prefHeight="40.0" prefWidth="42.0" stylesheets="@../Resources/style/css/GameStylesheet.css" />
+            <Label fx:id="label_AddMine2" layoutX="46.0" layoutY="65.0" prefHeight="17.0" prefWidth="138.0" text="(Drag And Drop The Mine)" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS" size="11.0" />
+               </font>
+            </Label>
+            <Label id="ErrorMineMSG" fx:id="ErrorMineMSG" layoutX="232.0" layoutY="9.0" prefHeight="17.0" prefWidth="65.0" text="Wrong Place!" textFill="#6d0000" visible="false">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="BattleShipLogo" prefHeight="88.0" prefWidth="162.0" styleClass="..\Resources\style\css\GameStylesheet.css">
+         <children>
+            <Pane fx:id="StatisticPane1" prefHeight="319.0" prefWidth="213.0" styleClass="menuPane" stylesheets="@../Resources/style/css/GameStylesheet.css" visible="false">
+               <children>
+                  <Label layoutX="6.0" layoutY="14.0" prefHeight="22.0" prefWidth="90.0" stylesheets="@../Resources/style/css/GameStylesheet.css" text="Statistics:">
+                     <styleClass>
+                        <String fx:value="detailsPreLabel" />
+                        <String fx:value="shadowEffect" />
+                     </styleClass>
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="27.0" layoutY="38.0" prefHeight="22.0" prefWidth="46.0" stylesheets="@../Resources/style/css/GameStylesheet.css" text="Moves:">
+                     <styleClass>
+                        <String fx:value="detailsPreLabel" />
+                        <String fx:value="shadowEffect" />
+                     </styleClass>
+                  </Label>
+                  <Label layoutX="27.0" layoutY="60.0" prefHeight="22.0" prefWidth="90.0" stylesheets="@../Resources/style/css/GameStylesheet.css" text="Time Passed:">
+                     <styleClass>
+                        <String fx:value="detailsPreLabel" />
+                        <String fx:value="shadowEffect" />
+                     </styleClass>
+                  </Label>
+                  <Label layoutX="6.0" layoutY="98.0" prefHeight="22.0" prefWidth="138.0" stylesheets="@../Resources/style/css/GameStylesheet.css" text="Player A statistics:">
+                     <styleClass>
+                        <String fx:value="detailsPreLabel" />
+                        <String fx:value="shadowEffect" />
+                     </styleClass>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="27.0" layoutY="126.0" prefHeight="22.0" prefWidth="46.0" stylesheets="@../Resources/style/css/GameStylesheet.css" text="Score:">
+                     <styleClass>
+                        <String fx:value="detailsPreLabel" />
+                        <String fx:value="shadowEffect" />
+                     </styleClass>
+                  </Label>
+                  <Label layoutX="27.0" layoutY="171.0" prefHeight="22.0" prefWidth="65.0" stylesheets="@../Resources/style/css/GameStylesheet.css" text="Avg Time:">
+                     <styleClass>
+                        <String fx:value="detailsPreLabel" />
+                        <String fx:value="shadowEffect" />
+                     </styleClass>
+                  </Label>
+                  <Label layoutX="27.0" layoutY="149.0" prefHeight="22.0" prefWidth="38.0" stylesheets="@../Resources/style/css/GameStylesheet.css" text="Miss:">
+                     <styleClass>
+                        <String fx:value="detailsPreLabel" />
+                        <String fx:value="shadowEffect" />
+                     </styleClass>
+                  </Label>
+                  <Label layoutX="27.0" layoutY="259.0" prefHeight="22.0" prefWidth="38.0" stylesheets="@../Resources/style/css/GameStylesheet.css" text="Miss:">
+                     <styleClass>
+                        <String fx:value="detailsPreLabel" />
+                        <String fx:value="shadowEffect" />
+                     </styleClass>
+                  </Label>
+                  <Label layoutX="27.0" layoutY="281.0" prefHeight="22.0" prefWidth="65.0" stylesheets="@../Resources/style/css/GameStylesheet.css" text="Avg Time:">
+                     <styleClass>
+                        <String fx:value="detailsPreLabel" />
+                        <String fx:value="shadowEffect" />
+                     </styleClass>
+                  </Label>
+                  <Label layoutX="27.0" layoutY="236.0" prefHeight="22.0" prefWidth="45.0" stylesheets="@../Resources/style/css/GameStylesheet.css" text="Score:">
+                     <styleClass>
+                        <String fx:value="detailsPreLabel" />
+                        <String fx:value="shadowEffect" />
+                     </styleClass>
+                  </Label>
+                  <Label layoutX="6.0" layoutY="208.0" prefHeight="22.0" prefWidth="138.0" stylesheets="@../Resources/style/css/GameStylesheet.css" text="Player B statistics:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="detailsPreLabel" />
+                        <String fx:value="shadowEffect" />
+                     </styleClass>
+                  </Label>
+                  <Label fx:id="label_StatMoves1" layoutX="121.0" layoutY="38.0" prefHeight="22.0" prefWidth="71.0" stylesheets="@../Resources/style/css/GameStylesheet.css" text="0">
+                     <styleClass>
+                        <String fx:value="detailsPreLabel" />
+                        <String fx:value="shadowEffect" />
+                     </styleClass>
+                  </Label>
+                  <Label fx:id="label_StatTimePassed1" layoutX="121.0" layoutY="60.0" prefHeight="22.0" prefWidth="71.0" stylesheets="@../Resources/style/css/GameStylesheet.css" text="0">
+                     <styleClass>
+                        <String fx:value="detailsPreLabel" />
+                        <String fx:value="shadowEffect" />
+                     </styleClass>
+                  </Label>
+                  <Label fx:id="label_StatAScore1" layoutX="121.0" layoutY="126.0" prefHeight="22.0" prefWidth="71.0" stylesheets="@../Resources/style/css/GameStylesheet.css" text="0">
+                     <styleClass>
+                        <String fx:value="detailsPreLabel" />
+                        <String fx:value="shadowEffect" />
+                     </styleClass>
+                  </Label>
+                  <Label fx:id="label_StatBScore1" layoutX="121.0" layoutY="236.0" prefHeight="22.0" prefWidth="71.0" stylesheets="@../Resources/style/css/GameStylesheet.css" text="0">
+                     <styleClass>
+                        <String fx:value="detailsPreLabel" />
+                        <String fx:value="shadowEffect" />
+                     </styleClass>
+                  </Label>
+                  <Label fx:id="label_StatBMiss1" layoutX="121.0" layoutY="259.0" prefHeight="22.0" prefWidth="71.0" stylesheets="@../Resources/style/css/GameStylesheet.css" text="0">
+                     <styleClass>
+                        <String fx:value="detailsPreLabel" />
+                        <String fx:value="shadowEffect" />
+                     </styleClass>
+                  </Label>
+                  <Label fx:id="label_StatAMiss1" layoutX="121.0" layoutY="149.0" prefHeight="22.0" prefWidth="71.0" stylesheets="@../Resources/style/css/GameStylesheet.css" text="0">
+                     <styleClass>
+                        <String fx:value="detailsPreLabel" />
+                        <String fx:value="shadowEffect" />
+                     </styleClass>
+                  </Label>
+                  <Label fx:id="label_StatAAvgTime1" layoutX="121.0" layoutY="171.0" prefHeight="22.0" prefWidth="71.0" stylesheets="@../Resources/style/css/GameStylesheet.css" text="0">
+                     <styleClass>
+                        <String fx:value="detailsPreLabel" />
+                        <String fx:value="shadowEffect" />
+                     </styleClass>
+                  </Label>
+                  <Label fx:id="label_StatBAvgTime1" layoutX="121.0" layoutY="281.0" prefHeight="22.0" prefWidth="71.0" stylesheets="@../Resources/style/css/GameStylesheet.css" text="0">
+                     <styleClass>
+                        <String fx:value="detailsPreLabel" />
+                        <String fx:value="shadowEffect" />
+                     </styleClass>
+                  </Label>
+                  <Button ellipsisString="" layoutX="175.0" layoutY="281.0" mnemonicParsing="false" onAction="#OnClick_backToMenu" opacity="0.5" prefHeight="27.0" prefWidth="28.0" styleClass="backButton" stylesheets="@../Resources/style/css/GameStylesheet.css" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Label fx:id="TextPlayerLabel" prefHeight="82.0" prefWidth="328.0" styleClass="..\Resources\style\css\GameStylesheet.css" GridPane.columnIndex="2" />
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</GridPane>

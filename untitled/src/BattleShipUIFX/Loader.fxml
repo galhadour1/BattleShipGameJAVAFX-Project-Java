@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane fx:id="LoaderWin" prefHeight="130.0" prefWidth="334.0" stylesheets="@../Resources/style/css/BattleShip.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BattleShipUIFX.LoaderController">
+   <children>
+      <Label fx:id="LoadingLabel" layoutX="101.0" layoutY="5.0" prefHeight="36.0" prefWidth="169.0" text="Loading XML" textAlignment="CENTER" textFill="WHITE" />
+      <ProgressBar fx:id="progressBar" layoutX="20.0" layoutY="60.0" prefHeight="30.0" prefWidth="295.0" progress="0.0" />
+   </children>
+</Pane>

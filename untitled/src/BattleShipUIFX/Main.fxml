@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="MenuWin" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="418.0" prefWidth="586.0" stylesheets="@../Resources/style/css/BattleShip.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BattleShipUIFX.MainController">
+   <children>
+      <Label fx:id="label_LoadingErrorsXML" layoutX="185.0" layoutY="132.0" prefHeight="23.0" prefWidth="320.0" text="Invalid XML" textFill="WHITE" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_LoadingErrorsFile" layoutX="185.0" layoutY="176.0" prefHeight="23.0" prefWidth="103.0" text="Invalid File" textFill="WHITE" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+      </Label>
+      <Button fx:id="button_StartGame" disable="true" layoutX="364.0" layoutY="148.0" mnemonicParsing="false" onAction="#StartGame" prefHeight="56.0" prefWidth="173.0" styleClass="menuButton" stylesheets="@../Resources/style/css/BattleShip.css" text="Start Game" />
+      <Button fx:id="button_LoadXML" layoutX="38.0" layoutY="148.0" mnemonicParsing="false" onAction="#LoadGameFromXML" prefHeight="56.0" prefWidth="173.0" styleClass="menuButton" stylesheets="@../Resources/style/css/BattleShip.css" text="Load XML File" />
+      <Button fx:id="button_LoadFromFile" layoutX="364.0" layoutY="307.0" mnemonicParsing="false" onAction="#LoadGame" prefHeight="34.0" prefWidth="150.0" styleClass="menuButton" text="Load Game" />
+      <Button fx:id="button_AgainstCom" layoutX="52.0" layoutY="307.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="159.0" styleClass="menuButton" text="Play Against COM" />
+      <Button fx:id="button_ExitProgram" layoutX="469.0" layoutY="14.0" mnemonicParsing="false" onAction="#ExitProgram" prefHeight="34.0" prefWidth="72.0" styleClass="exitButton" text="Exit">
+      <styleClass>
+      <String fx:value="exitButton" />
+      <String fx:value="menuButton" />
+      </styleClass></Button>
+   </children>
+</Pane>

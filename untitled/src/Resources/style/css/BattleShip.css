@@ -1,0 +1,69 @@
+#LoaderWin{
+    -fx-background-color:
+            #138fab,
+            linear-gradient(#138fab 0%, #4a8291 20%, #61a2b1 100%),
+            linear-gradient(#138fab, #191d22),
+            radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+#LoadingLabel
+{
+    -fx-font-family: "Algerian";
+    -fx-font-size: 20px;
+    -fx-textFill: white ;
+    -fx-text-fill: white;
+}
+#MenuWin{
+    -fx-background-image: url("../../images/BattleShip.jpg");
+    -fx-background-size:100% 100%;
+    -fx-width: 560px;
+    -fx-height: 383px;
+}
+
+.menuButton{
+    -fx-background-color:
+            #f0f0f0,
+           linear-gradient(#138fab 0%, #4a8291 20%,#61a2b1  100%),
+           linear-gradient(#138fab, #4a8291),
+            radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Algerian";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-size: 12px;
+    -fx-padding: 10 20 10 20;
+}
+
+.menuButton:hover{
+    -fx-background-color:
+            #f0f0f0,
+            linear-gradient(#138fab 0%, #4a8291 20%,#61a2b1  100%),
+            linear-gradient(#138fab, #4a8291),
+            radial-gradient(center 50% 0%, radius 100%, rgba(124, 141, 158, 0.9), rgba(255,255,255,0));
+    -fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Algerian";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-size: 12px;
+    -fx-padding: 10 20 10 20;
+}
+
+.exitButton{
+    -fx-background-color: #ab0c3c,
+    linear-gradient(#d38184 0%, #ff8d73 20%, #490011 100%),
+    linear-gradient(#d38184,  #ff8d73),
+    radial-gradient(center 50% 0%, radius 100%, rgba(148, 63, 71, 0.9), rgba(255,255,255,0));
+}
+
+.exitButton:hover{
+    -fx-background-color:  #ffffff,
+    linear-gradient(#d38184 0%, #ff8d73 20%, #490011 100%),
+    linear-gradient(#d38184,  #ff8d73),
+    radial-gradient(center 50% 0%, radius 100%, rgba(148, 63, 71, 0.9), rgba(255,255,255,0));
+}

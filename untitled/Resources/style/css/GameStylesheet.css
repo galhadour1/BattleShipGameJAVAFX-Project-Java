@@ -1,0 +1,115 @@
+#MainPane{
+    -fx-background-image: url("../../images/background.jpg");
+    -fx-background-size:100% 100%;
+}
+
+#DeatailsPane{
+    -fx-background-color: #138fab;
+    -fx-font-family: "Comic Sans MS";
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-border-color: black;
+    -fx-border-style: solid;
+    -fx-opacity: 80%;
+}
+
+
+#hitsGridPane{
+    -fx-background-image: url("../../images/boardBack.jpg");
+    -fx-background-size:100% 100%;
+}
+
+#shipsGridPane{
+    -fx-background-image: url("../../images/boardBack.jpg");
+    -fx-background-size:100% 100%;
+}
+#BattleShipLogo {
+    -fx-background-image: url("../../images/battleShipLogo.jpg");
+    -fx-background-size:100% 100%;
+}
+#Mine{
+    -fx-background-color:none;
+    -fx-background-image: url("../../images/cartoon_sea_mine.png");
+    -fx-background-size:100% 100%;
+}
+
+#Missile{
+    -fx-background-color:none;
+    -fx-background-image: url("../../images/missile.png");
+    -fx-background-size:100% 100%;
+}
+
+.menuPane{
+
+}
+
+.playerLabel{
+    -fx-text-fill: #ffffff;
+    -fx-font-family: "Comic Sans MS";
+}
+
+.detailsPreLabel{
+    -fx-text-fill: #ffffff;
+    -fx-font-family: "Comic Sans MS";
+}
+
+.deatilsLabel{
+    -fx-text-fill: #ffffff;
+    -fx-font-family: "Comic Sans MS";
+}
+.shadowEffect {
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 2, 0.5, 2, 2);
+}
+
+.gridPane{
+    -fx-background-color: #138fab;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-border-color: deepskyblue;
+    -fx-border-style: solid;
+    -fx-opacity: 80%;
+}
+
+
+.menuButton{
+    -fx-background-color:
+            mediumblue ,
+            linear-gradient(#138fab 0%, dodgerblue 20%, lightblue 100%),
+            linear-gradient(#138fab, #4a8291);
+    -fx-font-family: "Comic Sans MS";
+    -fx-text-fill: #ffffff;
+    -fx-border-style: solid 2px;
+    -fx-border-color: #12171c;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+}
+
+.menuButton:hover{
+    -fx-background-color:
+            mediumblue,
+            linear-gradient(#138fab 0%, dodgerblue 20%,lightblue  100%),
+            linear-gradient(#138fab, #4a8291);
+    -fx-font-family: "Comic Sans MS";
+}
+
+.exitButton{
+linear-gradient(#d38184 0%, #ff8d73 20%, #490011 100%),
+linear-gradient(#d38184,  #ff8d73);
+    -fx-font-family: "Comic Sans MS";
+}
+
+.exitButton:hover{
+    -fx-background-color: #ab0c3c,
+    linear-gradient(#d38184 0%, #ff8d73 20%, #490011 100%),
+    linear-gradient(#d38184,  #ff8d73);
+    -fx-font-family: "Comic Sans MS";
+}
+
+.backButton{
+    -fx-background-color:none;
+    -fx-background-image: url("../../images/back.PNG");
+    -fx-background-size:100% 100%;
+}
+

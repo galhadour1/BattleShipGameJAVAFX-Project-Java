@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="LoaderWin" prefHeight="130.0" prefWidth="334.0" stylesheets="@../Resources/style/css/BattleShip.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BattleShipUIFX.WinnerController">
+   <children>
+      <Label fx:id="TheWinnerIsLabel" layoutX="83.0" layoutY="5.0" prefHeight="36.0" prefWidth="169.0" text="THE WINNER IS:" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Algerian" size="24.0" />
+         </font></Label>
+      <Label fx:id="WinnerLabel" contentDisplay="CENTER" layoutX="110.0" layoutY="50.0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Algerian" size="22.0" />
+         </font></Label>
+      <Button layoutX="308.0" layoutY="1.0" mnemonicParsing="false" onAction="#onTaskFinished" prefHeight="12.0" prefWidth="23.0" text="X" textFill="#2c2929">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

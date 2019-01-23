@@ -1,0 +1,94 @@
+.root{
+    -fx-font-family: "Tahoma";
+// -fx-base: rgb(74, 130, 145);
+    -fx-background: rgb(225, 228, 203);
+}
+
+.radio-button{
+    -fx-font-family: "Tahoma";
+}
+
+.button{
+    -fx-font-family: "Tahoma";
+}
+
+.list-view{
+    -fx-background-color: rgb(225, 228, 203);
+}
+
+.radio-button:hover{
+    -fx-animated: inherit;
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(#00FFFF, #61a2b1);
+}
+
+.BLACK
+{
+    -fx-fill: black;
+    -fx-color: black;
+    -fx-background-color: black;
+    -fx-border-color: gray;
+    -fx-border-width: 1;
+}
+
+.EMPTY{
+    -fx-fill: white;
+    -fx-color: white;
+    -fx-background-color: white;
+    -fx-border-color: gray;
+    -fx-border-width: 1;
+}
+
+.UNDEFINED{
+    -fx-background-color: linear-gradient(lightgrey,darkgray);
+    -fx-border-color: darkgrey;
+    -fx-border-width: 1;
+}
+
+.ANIMEBLACK
+{
+    -fx-fill: black;
+    -fx-color: black;
+    -fx-border-color: gray;
+    -fx-border-width: 1;
+}
+
+.ANIMEEMPTY{
+    -fx-fill: white;
+    -fx-color: white;
+    -fx-border-color: gray;
+    -fx-border-width: 1;
+}
+
+.ANIMEUNDEFINED{
+    -fx-background-color: linear-gradient(lightgrey,darkgray);
+    -fx-border-color: darkgrey;
+    -fx-border-width: 1;
+}
+
+.BUTTON-ON-BOARD-IS-SELECTED{
+    -fx-border-color: #138fab;
+    -fx-border-width: 1.5;
+}
+
+.label{
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #4a8291;
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+}
+
+.BLACK-COLOR   {   -fx-color: black;}
+.EMPTY-COLOR{ -fx-color: white;}
+.UNDEFINED-COLOR{-fx-background-color: linear-gradient(lightgrey,darkgray);}
+
+
+
+#color{ -fx-color: black;}
+
+
+
+
+
